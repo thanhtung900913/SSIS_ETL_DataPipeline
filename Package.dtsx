@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="27"
-  DTS:VersionGUID="{B3B8A48E-1817-42AF-B7A6-5755B0DCF999}">
+  DTS:VersionBuild="28"
+  DTS:VersionGUID="{2DB4FEB2-724F-4D1D-8975-BA697059181F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -59,6 +59,7 @@
       DTS:refId="Package\Extract Data from Source"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
+      DTS:Disabled="True"
       DTS:DTSID="{9638786F-1935-4B7A-9944-D58291010861}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -8888,12 +8889,12 @@ where [refTable].[RevisionNumber] = ? and [refTable].[OrderDate] = ? and [refTab
               name="Lookup Match Output"
               startId="Package\Extract Data from Source\Lookup 1.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\Extract Data from Source.Paths[Lookup Match Output2]"
+              refId="Package\Extract Data from Source.Paths[Lookup Match Output1]"
               endId="Package\Extract Data from Source\Lookup 5.Inputs[Lookup Input]"
               name="Lookup Match Output"
               startId="Package\Extract Data from Source\Lookup 4.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\Extract Data from Source.Paths[Lookup Match Output1]"
+              refId="Package\Extract Data from Source.Paths[Lookup Match Output2]"
               endId="Package\Extract Data from Source\Lookup 3.Inputs[Lookup Input]"
               name="Lookup Match Output"
               startId="Package\Extract Data from Source\Lookup.Outputs[Lookup Match Output]" />
@@ -8903,47 +8904,47 @@ where [refTable].[RevisionNumber] = ? and [refTable].[OrderDate] = ? and [refTab
               name="Lookup Match Output"
               startId="Package\Extract Data from Source\Lookup 6.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\Extract Data from Source.Paths[Lookup No Match Output6]"
-              endId="Package\Extract Data from Source\Insert Destination 3.Inputs[OLE DB Destination Input]"
+              refId="Package\Extract Data from Source.Paths[Lookup No Match Output7]"
+              endId="Package\Extract Data from Source\Insert new Records.Inputs[OLE DB Destination Input]"
               name="Lookup No Match Output"
-              startId="Package\Extract Data from Source\Lookup 6.Outputs[Lookup No Match Output]" />
+              startId="Package\Extract Data from Source\Lookup 1.Outputs[Lookup No Match Output]" />
+            <path
+              refId="Package\Extract Data from Source.Paths[Lookup No Match Output6]"
+              endId="Package\Extract Data from Source\Update changing records.Inputs[OLE DB Command Input]"
+              name="Lookup No Match Output"
+              startId="Package\Extract Data from Source\Lookup 2.Outputs[Lookup No Match Output]" />
+            <path
+              refId="Package\Extract Data from Source.Paths[Lookup No Match Output4]"
+              endId="Package\Extract Data from Source\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Lookup No Match Output"
+              startId="Package\Extract Data from Source\Lookup.Outputs[Lookup No Match Output]" />
             <path
               refId="Package\Extract Data from Source.Paths[Lookup No Match Output5]"
+              endId="Package\Extract Data from Source\OLE DB Command 4.Inputs[OLE DB Command Input]"
+              name="Lookup No Match Output"
+              startId="Package\Extract Data from Source\Lookup 7.Outputs[Lookup No Match Output]" />
+            <path
+              refId="Package\Extract Data from Source.Paths[Lookup No Match Output2]"
+              endId="Package\Extract Data from Source\Insert Destination 2.Inputs[OLE DB Destination Input]"
+              name="Lookup No Match Output"
+              startId="Package\Extract Data from Source\Lookup 4.Outputs[Lookup No Match Output]" />
+            <path
+              refId="Package\Extract Data from Source.Paths[Lookup No Match Output1]"
               endId="Package\Extract Data from Source\OLE DB Command 3.Inputs[OLE DB Command Input]"
               name="Lookup No Match Output"
               startId="Package\Extract Data from Source\Lookup 5.Outputs[Lookup No Match Output]" />
             <path
-              refId="Package\Extract Data from Source.Paths[Lookup No Match Output4]"
-              endId="Package\Extract Data from Source\Insert Destination 2.Inputs[OLE DB Destination Input]"
+              refId="Package\Extract Data from Source.Paths[Lookup No Match Output]"
+              endId="Package\Extract Data from Source\Insert Destination 3.Inputs[OLE DB Destination Input]"
               name="Lookup No Match Output"
-              startId="Package\Extract Data from Source\Lookup 4.Outputs[Lookup No Match Output]" />
+              startId="Package\Extract Data from Source\Lookup 6.Outputs[Lookup No Match Output]" />
             <path
               refId="Package\Extract Data from Source.Paths[Lookup No Match Output3]"
               endId="Package\Extract Data from Source\OLE DB Command 2.Inputs[OLE DB Command Input]"
               name="Lookup No Match Output"
               startId="Package\Extract Data from Source\Lookup 3.Outputs[Lookup No Match Output]" />
             <path
-              refId="Package\Extract Data from Source.Paths[Lookup No Match Output2]"
-              endId="Package\Extract Data from Source\OLE DB Destination.Inputs[OLE DB Destination Input]"
-              name="Lookup No Match Output"
-              startId="Package\Extract Data from Source\Lookup.Outputs[Lookup No Match Output]" />
-            <path
-              refId="Package\Extract Data from Source.Paths[Lookup No Match Output7]"
-              endId="Package\Extract Data from Source\OLE DB Command 4.Inputs[OLE DB Command Input]"
-              name="Lookup No Match Output"
-              startId="Package\Extract Data from Source\Lookup 7.Outputs[Lookup No Match Output]" />
-            <path
-              refId="Package\Extract Data from Source.Paths[Lookup No Match Output1]"
-              endId="Package\Extract Data from Source\Update changing records.Inputs[OLE DB Command Input]"
-              name="Lookup No Match Output"
-              startId="Package\Extract Data from Source\Lookup 2.Outputs[Lookup No Match Output]" />
-            <path
-              refId="Package\Extract Data from Source.Paths[Lookup No Match Output]"
-              endId="Package\Extract Data from Source\Insert new Records.Inputs[OLE DB Destination Input]"
-              name="Lookup No Match Output"
-              startId="Package\Extract Data from Source\Lookup 1.Outputs[Lookup No Match Output]" />
-            <path
-              refId="Package\Extract Data from Source.Paths[New Output2]"
+              refId="Package\Extract Data from Source.Paths[New Output]"
               endId="Package\Extract Data from Source\Insert Destination 1.Inputs[OLE DB Destination Input]"
               name="New Output"
               startId="Package\Extract Data from Source\Slowly Changing Dimension 3.Outputs[New Output]" />
@@ -8953,47 +8954,62 @@ where [refTable].[RevisionNumber] = ? and [refTable].[OrderDate] = ? and [refTab
               name="New Output"
               startId="Package\Extract Data from Source\Slowly Changing Dimension 2.Outputs[New Output]" />
             <path
-              refId="Package\Extract Data from Source.Paths[New Output]"
+              refId="Package\Extract Data from Source.Paths[New Output2]"
               endId="Package\Extract Data from Source\Insert to Stag Product.Inputs[OLE DB Destination Input]"
               name="New Output"
               startId="Package\Extract Data from Source\Slowly Changing Dimension 1.Outputs[New Output]" />
             <path
-              refId="Package\Extract Data from Source.Paths[OLE DB Source Output1]"
-              endId="Package\Extract Data from Source\Lookup 1.Inputs[Lookup Input]"
-              name="OLE DB Source Output"
-              startId="Package\Extract Data from Source\2 Extract Territory.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\Extract Data from Source.Paths[OLE DB Source Output]"
-              endId="Package\Extract Data from Source\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input]"
-              name="OLE DB Source Output"
-              startId="Package\Extract Data from Source\1 Extract Product.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\Extract Data from Source.Paths[OLE DB Source Output4]"
-              endId="Package\Extract Data from Source\Lookup.Inputs[Lookup Input]"
-              name="OLE DB Source Output"
-              startId="Package\Extract Data from Source\5 Extract Person.Outputs[OLE DB Source Output]" />
-            <path
               refId="Package\Extract Data from Source.Paths[OLE DB Source Output5]"
-              endId="Package\Extract Data from Source\Lookup 4.Inputs[Lookup Input]"
-              name="OLE DB Source Output"
-              startId="Package\Extract Data from Source\6 Extract Sale Order details.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\Extract Data from Source.Paths[OLE DB Source Output6]"
-              endId="Package\Extract Data from Source\Lookup 6.Inputs[Lookup Input]"
-              name="OLE DB Source Output"
-              startId="Package\Extract Data from Source\7 Extract Sale Order Header.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\Extract Data from Source.Paths[OLE DB Source Output2]"
               endId="Package\Extract Data from Source\Slowly Changing Dimension 2.Inputs[Slowly Changing Dimension Input]"
               name="OLE DB Source Output"
               startId="Package\Extract Data from Source\3 Extract Product Sub Category.Outputs[OLE DB Source Output]" />
             <path
+              refId="Package\Extract Data from Source.Paths[OLE DB Source Output]"
+              endId="Package\Extract Data from Source\Lookup 1.Inputs[Lookup Input]"
+              name="OLE DB Source Output"
+              startId="Package\Extract Data from Source\2 Extract Territory.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Extract Data from Source.Paths[OLE DB Source Output1]"
+              endId="Package\Extract Data from Source\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input]"
+              name="OLE DB Source Output"
+              startId="Package\Extract Data from Source\1 Extract Product.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Extract Data from Source.Paths[OLE DB Source Output2]"
+              endId="Package\Extract Data from Source\Lookup.Inputs[Lookup Input]"
+              name="OLE DB Source Output"
+              startId="Package\Extract Data from Source\5 Extract Person.Outputs[OLE DB Source Output]" />
+            <path
               refId="Package\Extract Data from Source.Paths[OLE DB Source Output3]"
+              endId="Package\Extract Data from Source\Lookup 4.Inputs[Lookup Input]"
+              name="OLE DB Source Output"
+              startId="Package\Extract Data from Source\6 Extract Sale Order details.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Extract Data from Source.Paths[OLE DB Source Output4]"
+              endId="Package\Extract Data from Source\Lookup 6.Inputs[Lookup Input]"
+              name="OLE DB Source Output"
+              startId="Package\Extract Data from Source\7 Extract Sale Order Header.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Extract Data from Source.Paths[OLE DB Source Output6]"
               endId="Package\Extract Data from Source\Slowly Changing Dimension 3.Inputs[Slowly Changing Dimension Input]"
               name="OLE DB Source Output"
               startId="Package\Extract Data from Source\4 Extract Product Category.Outputs[OLE DB Source Output]" />
           </paths>
         </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Transform Data"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{A80C5D79-4972-4069-A4A0-2A9E3BA174F2}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Transform Data"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -9012,7 +9028,11 @@ where [refTable].[RevisionNumber] = ? and [refTable].[OrderDate] = ? and [refTab
         <NodeLayout
           Size="194.4,41.6"
           Id="Package\Extract Data from Source"
-          TopLeft="328.333315393992,55.4666662809584" />
+          TopLeft="325.833315530586,51.1333329777585" />
+        <NodeLayout
+          Size="150.4,41.6"
+          Id="Package\Transform Data"
+          TopLeft="286.666651003891,179.399998752475" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -9090,7 +9110,7 @@ where [refTable].[RevisionNumber] = ? and [refTable].[OrderDate] = ? and [refTab
           Id="Package\Extract Data from Source\OLE DB Command"
           TopLeft="225.5,310.3" />
         <EdgeLayout
-          Id="Package\Extract Data from Source.Paths[OLE DB Source Output3]"
+          Id="Package\Extract Data from Source.Paths[OLE DB Source Output6]"
           TopLeft="558.1,148.7">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -9112,7 +9132,7 @@ where [refTable].[RevisionNumber] = ? and [refTable].[OrderDate] = ? and [refTab
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extract Data from Source.Paths[OLE DB Source Output2]"
+          Id="Package\Extract Data from Source.Paths[OLE DB Source Output5]"
           TopLeft="281.1,148.7">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -9134,7 +9154,7 @@ where [refTable].[RevisionNumber] = ? and [refTable].[OrderDate] = ? and [refTab
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extract Data from Source.Paths[OLE DB Source Output1]"
+          Id="Package\Extract Data from Source.Paths[OLE DB Source Output]"
           TopLeft="1016.1,47.1">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -9156,7 +9176,7 @@ where [refTable].[RevisionNumber] = ? and [refTable].[OrderDate] = ? and [refTab
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extract Data from Source.Paths[OLE DB Source Output]"
+          Id="Package\Extract Data from Source.Paths[OLE DB Source Output1]"
           TopLeft="1298.1,148.7">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -9178,7 +9198,7 @@ where [refTable].[RevisionNumber] = ? and [refTable].[OrderDate] = ? and [refTab
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extract Data from Source.Paths[New Output2]"
+          Id="Package\Extract Data from Source.Paths[New Output]"
           TopLeft="523.3,250.3">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -9250,7 +9270,7 @@ where [refTable].[RevisionNumber] = ? and [refTable].[OrderDate] = ? and [refTab
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extract Data from Source.Paths[New Output]"
+          Id="Package\Extract Data from Source.Paths[New Output2]"
           TopLeft="1263.2,250.3">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -9274,7 +9294,7 @@ where [refTable].[RevisionNumber] = ? and [refTable].[OrderDate] = ? and [refTab
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extract Data from Source.Paths[Lookup No Match Output1]"
+          Id="Package\Extract Data from Source.Paths[Lookup No Match Output6]"
           TopLeft="1016.1,250.3">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -9298,7 +9318,7 @@ where [refTable].[RevisionNumber] = ? and [refTable].[OrderDate] = ? and [refTab
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extract Data from Source.Paths[Lookup No Match Output]"
+          Id="Package\Extract Data from Source.Paths[Lookup No Match Output7]"
           TopLeft="997.3,148.7">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -9478,7 +9498,7 @@ where [refTable].[RevisionNumber] = ? and [refTable].[OrderDate] = ? and [refTab
           Id="Package\Extract Data from Source\Lookup"
           TopLeft="1496.7,107.1" />
         <EdgeLayout
-          Id="Package\Extract Data from Source.Paths[Lookup No Match Output2]"
+          Id="Package\Extract Data from Source.Paths[Lookup No Match Output4]"
           TopLeft="1535.63333333333,148.7">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -9518,7 +9538,7 @@ where [refTable].[RevisionNumber] = ? and [refTable].[OrderDate] = ? and [refTab
           Id="Package\Extract Data from Source\Lookup 3"
           TopLeft="1699.7,208.7" />
         <EdgeLayout
-          Id="Package\Extract Data from Source.Paths[Lookup Match Output1]"
+          Id="Package\Extract Data from Source.Paths[Lookup Match Output2]"
           TopLeft="1570.56666666667,148.7">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -9582,7 +9602,7 @@ where [refTable].[RevisionNumber] = ? and [refTable].[OrderDate] = ? and [refTab
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extract Data from Source.Paths[OLE DB Source Output4]"
+          Id="Package\Extract Data from Source.Paths[OLE DB Source Output2]"
           TopLeft="1553.1,47.0999999999998">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -9620,7 +9640,7 @@ where [refTable].[RevisionNumber] = ? and [refTable].[OrderDate] = ? and [refTab
           Id="Package\Extract Data from Source\OLE DB Command 3"
           TopLeft="2082.1,310.3" />
         <EdgeLayout
-          Id="Package\Extract Data from Source.Paths[OLE DB Source Output5]"
+          Id="Package\Extract Data from Source.Paths[OLE DB Source Output3]"
           TopLeft="1965.1,47.0999999999998">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -9642,7 +9662,7 @@ where [refTable].[RevisionNumber] = ? and [refTable].[OrderDate] = ? and [refTab
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extract Data from Source.Paths[Lookup No Match Output4]"
+          Id="Package\Extract Data from Source.Paths[Lookup No Match Output2]"
           TopLeft="1946.3,148.7">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -9682,7 +9702,7 @@ where [refTable].[RevisionNumber] = ? and [refTable].[OrderDate] = ? and [refTab
           Id="Package\Extract Data from Source\Lookup 5"
           TopLeft="2109.7,208.7" />
         <EdgeLayout
-          Id="Package\Extract Data from Source.Paths[Lookup Match Output2]"
+          Id="Package\Extract Data from Source.Paths[Lookup Match Output1]"
           TopLeft="1983.9,148.7">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -9718,7 +9738,7 @@ where [refTable].[RevisionNumber] = ? and [refTable].[OrderDate] = ? and [refTab
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extract Data from Source.Paths[Lookup No Match Output5]"
+          Id="Package\Extract Data from Source.Paths[Lookup No Match Output1]"
           TopLeft="2170.1,250.3">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -9758,7 +9778,7 @@ where [refTable].[RevisionNumber] = ? and [refTable].[OrderDate] = ? and [refTab
           Id="Package\Extract Data from Source\Lookup 6"
           TopLeft="2563.93328971433,214.066665178074" />
         <EdgeLayout
-          Id="Package\Extract Data from Source.Paths[OLE DB Source Output6]"
+          Id="Package\Extract Data from Source.Paths[OLE DB Source Output4]"
           TopLeft="2664.5,148.7">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -9792,7 +9812,7 @@ where [refTable].[RevisionNumber] = ? and [refTable].[OrderDate] = ? and [refTab
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extract Data from Source.Paths[Lookup No Match Output6]"
+          Id="Package\Extract Data from Source.Paths[Lookup No Match Output]"
           TopLeft="2624.33328971433,255.666665178074">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -9868,7 +9888,7 @@ where [refTable].[RevisionNumber] = ? and [refTable].[OrderDate] = ? and [refTab
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extract Data from Source.Paths[Lookup No Match Output7]"
+          Id="Package\Extract Data from Source.Paths[Lookup No Match Output5]"
           TopLeft="2788.89995342146,356.199997812311">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -9906,199 +9926,6 @@ where [refTable].[RevisionNumber] = ? and [refTable].[OrderDate] = ? and [refTab
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Extract Data from Source\Slowly Changing Dimension 3">
-    <Properties>
-      <Property>
-        <Name>SCDMetadata</Name>
-        <Value
-          type="q2:string">&lt;?xml version="1.0" encoding="utf-16"?&gt;
-&lt;SCDWizardMetadata xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
-  &lt;ConnectionID&gt;{E9F0883D-2574-47B3-A989-2CBA048C2E98}&lt;/ConnectionID&gt;
-  &lt;TableName&gt;[dbo].[StageProductCategory]&lt;/TableName&gt;
-  &lt;InputToColumnsCollection&gt;
-    &lt;InputColumnToDBColumn&gt;
-      &lt;IdentificationString&gt;3 Extract Product Category.Outputs[OLE DB Source Output].Columns[ModifiedDate]&lt;/IdentificationString&gt;
-      &lt;ColumnName&gt;ModifiedDate&lt;/ColumnName&gt;
-      &lt;KeyType&gt;None&lt;/KeyType&gt;
-      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
-    &lt;/InputColumnToDBColumn&gt;
-    &lt;InputColumnToDBColumn&gt;
-      &lt;IdentificationString&gt;3 Extract Product Category.Outputs[OLE DB Source Output].Columns[Name]&lt;/IdentificationString&gt;
-      &lt;ColumnName&gt;Name&lt;/ColumnName&gt;
-      &lt;KeyType&gt;None&lt;/KeyType&gt;
-      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
-    &lt;/InputColumnToDBColumn&gt;
-    &lt;InputColumnToDBColumn&gt;
-      &lt;IdentificationString&gt;3 Extract Product Category.Outputs[OLE DB Source Output].Columns[ProductCategoryID]&lt;/IdentificationString&gt;
-      &lt;ColumnName&gt;ProductCategoryID&lt;/ColumnName&gt;
-      &lt;KeyType&gt;BusinessKey&lt;/KeyType&gt;
-      &lt;ChangeType&gt;None&lt;/ChangeType&gt;
-    &lt;/InputColumnToDBColumn&gt;
-    &lt;InputColumnToDBColumn&gt;
-      &lt;IdentificationString&gt;3 Extract Product Category.Outputs[OLE DB Source Output].Columns[rowguid]&lt;/IdentificationString&gt;
-      &lt;ColumnName&gt;rowguid&lt;/ColumnName&gt;
-      &lt;KeyType&gt;None&lt;/KeyType&gt;
-      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
-    &lt;/InputColumnToDBColumn&gt;
-  &lt;/InputToColumnsCollection&gt;
-  &lt;GeneratedComponentsIdentificationStrings&gt;
-    &lt;anyType xsi:type="xsd:string"&gt;Insert Destination 1&lt;/anyType&gt;
-    &lt;anyType xsi:type="xsd:string"&gt;OLE DB Command 1&lt;/anyType&gt;
-    &lt;anyType xsi:type="xsd:string"&gt;OLE DB Command 2&lt;/anyType&gt;
-  &lt;/GeneratedComponentsIdentificationStrings&gt;
-  &lt;FailFixedAttribute&gt;false&lt;/FailFixedAttribute&gt;
-  &lt;FailChangeAttribute&gt;false&lt;/FailChangeAttribute&gt;
-  &lt;UseStartEndDate&gt;false&lt;/UseStartEndDate&gt;
-  &lt;CurrentIndicatorColumn /&gt;
-  &lt;InferredIndicatorColumn /&gt;
-  &lt;ValueCurrent /&gt;
-  &lt;ValueExpired /&gt;
-  &lt;StartDateColumn /&gt;
-  &lt;EndDateColumn /&gt;
-  &lt;DateVariable /&gt;
-  &lt;EnableInferredSupport&gt;true&lt;/EnableInferredSupport&gt;
-&lt;/SCDWizardMetadata&gt;</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Extract Data from Source\3 Extract Product Sub Category">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Extract Data from Source\Insert new Records">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Extract Data from Source\4 Extract Product Category">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Extract Data from Source\2 Extract Territory">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Extract Data from Source\Lookup 1">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[StageTerritory]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Extract Data from Source\Slowly Changing Dimension 2">
-    <Properties>
-      <Property>
-        <Name>SCDMetadata</Name>
-        <Value
-          type="q2:string">&lt;?xml version="1.0" encoding="utf-16"?&gt;
-&lt;SCDWizardMetadata xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
-  &lt;ConnectionID&gt;{E9F0883D-2574-47B3-A989-2CBA048C2E98}&lt;/ConnectionID&gt;
-  &lt;TableName&gt;[dbo].[StageSubCategory]&lt;/TableName&gt;
-  &lt;InputToColumnsCollection&gt;
-    &lt;InputColumnToDBColumn&gt;
-      &lt;IdentificationString&gt;3 Extract Product Sub Category.Outputs[OLE DB Source Output].Columns[ModifiedDate]&lt;/IdentificationString&gt;
-      &lt;ColumnName&gt;ModifiedDate&lt;/ColumnName&gt;
-      &lt;KeyType&gt;None&lt;/KeyType&gt;
-      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
-    &lt;/InputColumnToDBColumn&gt;
-    &lt;InputColumnToDBColumn&gt;
-      &lt;IdentificationString&gt;3 Extract Product Sub Category.Outputs[OLE DB Source Output].Columns[Name]&lt;/IdentificationString&gt;
-      &lt;ColumnName&gt;Name&lt;/ColumnName&gt;
-      &lt;KeyType&gt;None&lt;/KeyType&gt;
-      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
-    &lt;/InputColumnToDBColumn&gt;
-    &lt;InputColumnToDBColumn&gt;
-      &lt;IdentificationString&gt;3 Extract Product Sub Category.Outputs[OLE DB Source Output].Columns[ProductCategoryID]&lt;/IdentificationString&gt;
-      &lt;ColumnName&gt;ProductCategoryID&lt;/ColumnName&gt;
-      &lt;KeyType&gt;BusinessKey&lt;/KeyType&gt;
-      &lt;ChangeType&gt;None&lt;/ChangeType&gt;
-    &lt;/InputColumnToDBColumn&gt;
-    &lt;InputColumnToDBColumn&gt;
-      &lt;IdentificationString&gt;3 Extract Product Sub Category.Outputs[OLE DB Source Output].Columns[ProductSubcategoryID]&lt;/IdentificationString&gt;
-      &lt;ColumnName&gt;ProductSubcategoryID&lt;/ColumnName&gt;
-      &lt;KeyType&gt;BusinessKey&lt;/KeyType&gt;
-      &lt;ChangeType&gt;None&lt;/ChangeType&gt;
-    &lt;/InputColumnToDBColumn&gt;
-    &lt;InputColumnToDBColumn&gt;
-      &lt;IdentificationString&gt;3 Extract Product Sub Category.Outputs[OLE DB Source Output].Columns[rowguid]&lt;/IdentificationString&gt;
-      &lt;ColumnName&gt;rowguid&lt;/ColumnName&gt;
-      &lt;KeyType&gt;None&lt;/KeyType&gt;
-      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
-    &lt;/InputColumnToDBColumn&gt;
-  &lt;/InputToColumnsCollection&gt;
-  &lt;GeneratedComponentsIdentificationStrings&gt;
-    &lt;anyType xsi:type="xsd:string"&gt;Insert Destination&lt;/anyType&gt;
-    &lt;anyType xsi:type="xsd:string"&gt;OLE DB Command&lt;/anyType&gt;
-    &lt;anyType xsi:type="xsd:string"&gt;OLE DB Command 1&lt;/anyType&gt;
-  &lt;/GeneratedComponentsIdentificationStrings&gt;
-  &lt;FailFixedAttribute&gt;false&lt;/FailFixedAttribute&gt;
-  &lt;FailChangeAttribute&gt;false&lt;/FailChangeAttribute&gt;
-  &lt;UseStartEndDate&gt;false&lt;/UseStartEndDate&gt;
-  &lt;CurrentIndicatorColumn /&gt;
-  &lt;InferredIndicatorColumn /&gt;
-  &lt;ValueCurrent /&gt;
-  &lt;ValueExpired /&gt;
-  &lt;StartDateColumn /&gt;
-  &lt;EndDateColumn /&gt;
-  &lt;DateVariable /&gt;
-  &lt;EnableInferredSupport&gt;true&lt;/EnableInferredSupport&gt;
-&lt;/SCDWizardMetadata&gt;</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Extract Data from Source\Slowly Changing Dimension 1">
     <Properties>
@@ -10282,6 +10109,19 @@ where [refTable].[RevisionNumber] = ? and [refTable].[OrderDate] = ? and [refTab
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
+    design-time-name="Package\Extract Data from Source\4 Extract Product Category">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Extract Data from Source\Lookup 2">
     <Properties>
       <Property>
@@ -10305,7 +10145,30 @@ where [refTable].[RevisionNumber] = ? and [refTable].[OrderDate] = ? and [refTab
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Extract Data from Source\1 Extract Product">
+    design-time-name="Package\Extract Data from Source\Lookup 7">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[StageSaleHeader]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract Data from Source\6 Extract Sale Order details">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -10318,7 +10181,171 @@ where [refTable].[RevisionNumber] = ? and [refTable].[OrderDate] = ? and [refTab
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Extract Data from Source\5 Extract Person">
+    design-time-name="Package\Extract Data from Source\Lookup 4">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[StageSaleDetail]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract Data from Source\Slowly Changing Dimension 3">
+    <Properties>
+      <Property>
+        <Name>SCDMetadata</Name>
+        <Value
+          type="q2:string">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SCDWizardMetadata xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;ConnectionID&gt;{E9F0883D-2574-47B3-A989-2CBA048C2E98}&lt;/ConnectionID&gt;
+  &lt;TableName&gt;[dbo].[StageProductCategory]&lt;/TableName&gt;
+  &lt;InputToColumnsCollection&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;3 Extract Product Category.Outputs[OLE DB Source Output].Columns[ModifiedDate]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;ModifiedDate&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;3 Extract Product Category.Outputs[OLE DB Source Output].Columns[Name]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;Name&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;3 Extract Product Category.Outputs[OLE DB Source Output].Columns[ProductCategoryID]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;ProductCategoryID&lt;/ColumnName&gt;
+      &lt;KeyType&gt;BusinessKey&lt;/KeyType&gt;
+      &lt;ChangeType&gt;None&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;3 Extract Product Category.Outputs[OLE DB Source Output].Columns[rowguid]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;rowguid&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+  &lt;/InputToColumnsCollection&gt;
+  &lt;GeneratedComponentsIdentificationStrings&gt;
+    &lt;anyType xsi:type="xsd:string"&gt;Insert Destination 1&lt;/anyType&gt;
+    &lt;anyType xsi:type="xsd:string"&gt;OLE DB Command 1&lt;/anyType&gt;
+    &lt;anyType xsi:type="xsd:string"&gt;OLE DB Command 2&lt;/anyType&gt;
+  &lt;/GeneratedComponentsIdentificationStrings&gt;
+  &lt;FailFixedAttribute&gt;false&lt;/FailFixedAttribute&gt;
+  &lt;FailChangeAttribute&gt;false&lt;/FailChangeAttribute&gt;
+  &lt;UseStartEndDate&gt;false&lt;/UseStartEndDate&gt;
+  &lt;CurrentIndicatorColumn /&gt;
+  &lt;InferredIndicatorColumn /&gt;
+  &lt;ValueCurrent /&gt;
+  &lt;ValueExpired /&gt;
+  &lt;StartDateColumn /&gt;
+  &lt;EndDateColumn /&gt;
+  &lt;DateVariable /&gt;
+  &lt;EnableInferredSupport&gt;true&lt;/EnableInferredSupport&gt;
+&lt;/SCDWizardMetadata&gt;</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract Data from Source\Slowly Changing Dimension 2">
+    <Properties>
+      <Property>
+        <Name>SCDMetadata</Name>
+        <Value
+          type="q2:string">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SCDWizardMetadata xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;ConnectionID&gt;{E9F0883D-2574-47B3-A989-2CBA048C2E98}&lt;/ConnectionID&gt;
+  &lt;TableName&gt;[dbo].[StageSubCategory]&lt;/TableName&gt;
+  &lt;InputToColumnsCollection&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;3 Extract Product Sub Category.Outputs[OLE DB Source Output].Columns[ModifiedDate]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;ModifiedDate&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;3 Extract Product Sub Category.Outputs[OLE DB Source Output].Columns[Name]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;Name&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;3 Extract Product Sub Category.Outputs[OLE DB Source Output].Columns[ProductCategoryID]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;ProductCategoryID&lt;/ColumnName&gt;
+      &lt;KeyType&gt;BusinessKey&lt;/KeyType&gt;
+      &lt;ChangeType&gt;None&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;3 Extract Product Sub Category.Outputs[OLE DB Source Output].Columns[ProductSubcategoryID]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;ProductSubcategoryID&lt;/ColumnName&gt;
+      &lt;KeyType&gt;BusinessKey&lt;/KeyType&gt;
+      &lt;ChangeType&gt;None&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;3 Extract Product Sub Category.Outputs[OLE DB Source Output].Columns[rowguid]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;rowguid&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+  &lt;/InputToColumnsCollection&gt;
+  &lt;GeneratedComponentsIdentificationStrings&gt;
+    &lt;anyType xsi:type="xsd:string"&gt;Insert Destination&lt;/anyType&gt;
+    &lt;anyType xsi:type="xsd:string"&gt;OLE DB Command&lt;/anyType&gt;
+    &lt;anyType xsi:type="xsd:string"&gt;OLE DB Command 1&lt;/anyType&gt;
+  &lt;/GeneratedComponentsIdentificationStrings&gt;
+  &lt;FailFixedAttribute&gt;false&lt;/FailFixedAttribute&gt;
+  &lt;FailChangeAttribute&gt;false&lt;/FailChangeAttribute&gt;
+  &lt;UseStartEndDate&gt;false&lt;/UseStartEndDate&gt;
+  &lt;CurrentIndicatorColumn /&gt;
+  &lt;InferredIndicatorColumn /&gt;
+  &lt;ValueCurrent /&gt;
+  &lt;ValueExpired /&gt;
+  &lt;StartDateColumn /&gt;
+  &lt;EndDateColumn /&gt;
+  &lt;DateVariable /&gt;
+  &lt;EnableInferredSupport&gt;true&lt;/EnableInferredSupport&gt;
+&lt;/SCDWizardMetadata&gt;</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract Data from Source\Lookup 1">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[StageTerritory]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract Data from Source\3 Extract Product Sub Category">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -10349,7 +10376,7 @@ where [refTable].[RevisionNumber] = ? and [refTable].[OrderDate] = ? and [refTab
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -10359,89 +10386,7 @@ where [refTable].[RevisionNumber] = ? and [refTable].[OrderDate] = ? and [refTab
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Extract Data from Source\Lookup 3">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[StagPerson]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Extract Data from Source\6 Extract Sale Order details">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Extract Data from Source\Lookup 4">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[StageSaleDetail]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Extract Data from Source\Lookup 5">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[StageSaleDetail]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -10467,7 +10412,7 @@ where [refTable].[RevisionNumber] = ? and [refTable].[OrderDate] = ? and [refTab
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -10477,7 +10422,7 @@ where [refTable].[RevisionNumber] = ? and [refTable].[OrderDate] = ? and [refTab
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -10485,25 +10430,100 @@ where [refTable].[RevisionNumber] = ? and [refTable].[OrderDate] = ? and [refTab
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Extract Data from Source\Lookup 7">
+    design-time-name="Package\Extract Data from Source\Lookup 3">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[dbo].[StageSaleHeader]</Value>
+          type="q3:string">[dbo].[StagPerson]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract Data from Source\5 Extract Person">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract Data from Source\Insert new Records">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract Data from Source\Lookup 5">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[StageSaleDetail]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract Data from Source\2 Extract Territory">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract Data from Source\1 Extract Product">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
