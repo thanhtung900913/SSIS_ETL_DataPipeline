@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="29"
-  DTS:VersionGUID="{443045FB-F8C3-4B50-8CBF-8FDD6B9C5A3D}">
+  DTS:VersionBuild="34"
+  DTS:VersionGUID="{A2DE6296-1935-4938-AB7A-0889F4FD48AD}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -55,6 +55,1701 @@
   </DTS:ConnectionManagers>
   <DTS:Variables />
   <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{C12B8CD1-3DAA-46B8-A0A5-D6BFC623ECE4}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task\Extract stage Order Header"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Extract stage Order Header"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[StageSaleHeader]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Extract stage Order Header.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LAPTOP-21D4TOM5\SQLEXPRESS.Staging_area]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-21D4TOM5\SQLEXPRESS.Staging_area]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].Columns[SalesOrderID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].ExternalColumns[SalesOrderID]"
+                      lineageId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].Columns[SalesOrderID]"
+                      name="SalesOrderID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].Columns[RevisionNumber]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].ExternalColumns[RevisionNumber]"
+                      lineageId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].Columns[RevisionNumber]"
+                      name="RevisionNumber"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].Columns[OrderDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].ExternalColumns[OrderDate]"
+                      lineageId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].Columns[OrderDate]"
+                      name="OrderDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].Columns[DueDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].ExternalColumns[DueDate]"
+                      lineageId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].Columns[DueDate]"
+                      name="DueDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].Columns[ShipDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].ExternalColumns[ShipDate]"
+                      lineageId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].Columns[ShipDate]"
+                      name="ShipDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].Columns[Status]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].ExternalColumns[Status]"
+                      lineageId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].Columns[Status]"
+                      name="Status"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].Columns[OnlineOrderFlag]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].ExternalColumns[OnlineOrderFlag]"
+                      lineageId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].Columns[OnlineOrderFlag]"
+                      name="OnlineOrderFlag"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].Columns[SalesOrderNumber]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].ExternalColumns[SalesOrderNumber]"
+                      length="25"
+                      lineageId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].Columns[SalesOrderNumber]"
+                      name="SalesOrderNumber"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].Columns[PurchaseOrderNumber]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].ExternalColumns[PurchaseOrderNumber]"
+                      length="25"
+                      lineageId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].Columns[PurchaseOrderNumber]"
+                      name="PurchaseOrderNumber"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].Columns[AccountNumber]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].ExternalColumns[AccountNumber]"
+                      length="15"
+                      lineageId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].Columns[AccountNumber]"
+                      name="AccountNumber"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].Columns[CustomerID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].ExternalColumns[CustomerID]"
+                      lineageId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].Columns[CustomerID]"
+                      name="CustomerID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].Columns[SalesPersonID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].ExternalColumns[SalesPersonID]"
+                      lineageId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].Columns[SalesPersonID]"
+                      name="SalesPersonID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].Columns[TerritoryID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].ExternalColumns[TerritoryID]"
+                      lineageId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].Columns[TerritoryID]"
+                      name="TerritoryID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].Columns[BillToAddressID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].ExternalColumns[BillToAddressID]"
+                      lineageId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].Columns[BillToAddressID]"
+                      name="BillToAddressID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].Columns[ShipToAddressID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].ExternalColumns[ShipToAddressID]"
+                      lineageId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].Columns[ShipToAddressID]"
+                      name="ShipToAddressID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].Columns[ShipMethodID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].ExternalColumns[ShipMethodID]"
+                      lineageId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].Columns[ShipMethodID]"
+                      name="ShipMethodID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].Columns[CreditCardID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].ExternalColumns[CreditCardID]"
+                      lineageId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].Columns[CreditCardID]"
+                      name="CreditCardID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].Columns[CreditCardApprovalCode]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].ExternalColumns[CreditCardApprovalCode]"
+                      length="15"
+                      lineageId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].Columns[CreditCardApprovalCode]"
+                      name="CreditCardApprovalCode"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].Columns[CurrencyRateID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].ExternalColumns[CurrencyRateID]"
+                      lineageId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].Columns[CurrencyRateID]"
+                      name="CurrencyRateID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].Columns[SubTotal]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].ExternalColumns[SubTotal]"
+                      lineageId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].Columns[SubTotal]"
+                      name="SubTotal"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].Columns[TaxAmt]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].ExternalColumns[TaxAmt]"
+                      lineageId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].Columns[TaxAmt]"
+                      name="TaxAmt"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].Columns[Freight]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].ExternalColumns[Freight]"
+                      lineageId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].Columns[Freight]"
+                      name="Freight"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].Columns[TotalDue]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].ExternalColumns[TotalDue]"
+                      lineageId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].Columns[TotalDue]"
+                      name="TotalDue"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].Columns[Comment]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].ExternalColumns[Comment]"
+                      length="128"
+                      lineageId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].Columns[Comment]"
+                      name="Comment"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].Columns[rowguid]"
+                      dataType="guid"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].ExternalColumns[rowguid]"
+                      lineageId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].Columns[rowguid]"
+                      name="rowguid"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].Columns[ModifiedDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].ExternalColumns[ModifiedDate]"
+                      lineageId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].Columns[ModifiedDate]"
+                      name="ModifiedDate"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].ExternalColumns[SalesOrderID]"
+                      dataType="i4"
+                      name="SalesOrderID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].ExternalColumns[RevisionNumber]"
+                      dataType="ui1"
+                      name="RevisionNumber" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].ExternalColumns[OrderDate]"
+                      dataType="dbTimeStamp"
+                      name="OrderDate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].ExternalColumns[DueDate]"
+                      dataType="dbTimeStamp"
+                      name="DueDate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].ExternalColumns[ShipDate]"
+                      dataType="dbTimeStamp"
+                      name="ShipDate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].ExternalColumns[Status]"
+                      dataType="ui1"
+                      name="Status" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].ExternalColumns[OnlineOrderFlag]"
+                      dataType="bool"
+                      name="OnlineOrderFlag" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].ExternalColumns[SalesOrderNumber]"
+                      dataType="wstr"
+                      length="25"
+                      name="SalesOrderNumber" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].ExternalColumns[PurchaseOrderNumber]"
+                      dataType="wstr"
+                      length="25"
+                      name="PurchaseOrderNumber" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].ExternalColumns[AccountNumber]"
+                      dataType="wstr"
+                      length="15"
+                      name="AccountNumber" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].ExternalColumns[CustomerID]"
+                      dataType="i4"
+                      name="CustomerID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].ExternalColumns[SalesPersonID]"
+                      dataType="i4"
+                      name="SalesPersonID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].ExternalColumns[TerritoryID]"
+                      dataType="i4"
+                      name="TerritoryID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].ExternalColumns[BillToAddressID]"
+                      dataType="i4"
+                      name="BillToAddressID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].ExternalColumns[ShipToAddressID]"
+                      dataType="i4"
+                      name="ShipToAddressID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].ExternalColumns[ShipMethodID]"
+                      dataType="i4"
+                      name="ShipMethodID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].ExternalColumns[CreditCardID]"
+                      dataType="i4"
+                      name="CreditCardID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].ExternalColumns[CreditCardApprovalCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="CreditCardApprovalCode" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].ExternalColumns[CurrencyRateID]"
+                      dataType="i4"
+                      name="CurrencyRateID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].ExternalColumns[SubTotal]"
+                      dataType="cy"
+                      name="SubTotal" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].ExternalColumns[TaxAmt]"
+                      dataType="cy"
+                      name="TaxAmt" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].ExternalColumns[Freight]"
+                      dataType="cy"
+                      name="Freight" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].ExternalColumns[TotalDue]"
+                      dataType="cy"
+                      name="TotalDue" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].ExternalColumns[Comment]"
+                      dataType="wstr"
+                      length="128"
+                      name="Comment" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].ExternalColumns[rowguid]"
+                      dataType="guid"
+                      name="rowguid" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].ExternalColumns[ModifiedDate]"
+                      dataType="dbTimeStamp"
+                      name="ModifiedDate" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Error Output].Columns[SalesOrderID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Error Output].Columns[SalesOrderID]"
+                      name="SalesOrderID" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Error Output].Columns[RevisionNumber]"
+                      dataType="ui1"
+                      lineageId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Error Output].Columns[RevisionNumber]"
+                      name="RevisionNumber" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Error Output].Columns[OrderDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Error Output].Columns[OrderDate]"
+                      name="OrderDate" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Error Output].Columns[DueDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Error Output].Columns[DueDate]"
+                      name="DueDate" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Error Output].Columns[ShipDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Error Output].Columns[ShipDate]"
+                      name="ShipDate" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Error Output].Columns[Status]"
+                      dataType="ui1"
+                      lineageId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Error Output].Columns[Status]"
+                      name="Status" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Error Output].Columns[OnlineOrderFlag]"
+                      dataType="bool"
+                      lineageId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Error Output].Columns[OnlineOrderFlag]"
+                      name="OnlineOrderFlag" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Error Output].Columns[SalesOrderNumber]"
+                      dataType="wstr"
+                      length="25"
+                      lineageId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Error Output].Columns[SalesOrderNumber]"
+                      name="SalesOrderNumber" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Error Output].Columns[PurchaseOrderNumber]"
+                      dataType="wstr"
+                      length="25"
+                      lineageId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Error Output].Columns[PurchaseOrderNumber]"
+                      name="PurchaseOrderNumber" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Error Output].Columns[AccountNumber]"
+                      dataType="wstr"
+                      length="15"
+                      lineageId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Error Output].Columns[AccountNumber]"
+                      name="AccountNumber" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Error Output].Columns[CustomerID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Error Output].Columns[CustomerID]"
+                      name="CustomerID" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Error Output].Columns[SalesPersonID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Error Output].Columns[SalesPersonID]"
+                      name="SalesPersonID" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Error Output].Columns[TerritoryID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Error Output].Columns[TerritoryID]"
+                      name="TerritoryID" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Error Output].Columns[BillToAddressID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Error Output].Columns[BillToAddressID]"
+                      name="BillToAddressID" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Error Output].Columns[ShipToAddressID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Error Output].Columns[ShipToAddressID]"
+                      name="ShipToAddressID" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Error Output].Columns[ShipMethodID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Error Output].Columns[ShipMethodID]"
+                      name="ShipMethodID" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Error Output].Columns[CreditCardID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Error Output].Columns[CreditCardID]"
+                      name="CreditCardID" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Error Output].Columns[CreditCardApprovalCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      lineageId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Error Output].Columns[CreditCardApprovalCode]"
+                      name="CreditCardApprovalCode" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Error Output].Columns[CurrencyRateID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Error Output].Columns[CurrencyRateID]"
+                      name="CurrencyRateID" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Error Output].Columns[SubTotal]"
+                      dataType="cy"
+                      lineageId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Error Output].Columns[SubTotal]"
+                      name="SubTotal" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Error Output].Columns[TaxAmt]"
+                      dataType="cy"
+                      lineageId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Error Output].Columns[TaxAmt]"
+                      name="TaxAmt" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Error Output].Columns[Freight]"
+                      dataType="cy"
+                      lineageId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Error Output].Columns[Freight]"
+                      name="Freight" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Error Output].Columns[TotalDue]"
+                      dataType="cy"
+                      lineageId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Error Output].Columns[TotalDue]"
+                      name="TotalDue" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Error Output].Columns[Comment]"
+                      dataType="wstr"
+                      length="128"
+                      lineageId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Error Output].Columns[Comment]"
+                      name="Comment" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Error Output].Columns[rowguid]"
+                      dataType="guid"
+                      lineageId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Error Output].Columns[rowguid]"
+                      name="rowguid" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Error Output].Columns[ModifiedDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Error Output].Columns[ModifiedDate]"
+                      name="ModifiedDate" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Extract stage territory"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Extract stage territory"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[StageTerritory]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Extract stage territory.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LAPTOP-21D4TOM5\SQLEXPRESS.Staging_area]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-21D4TOM5\SQLEXPRESS.Staging_area]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Output].Columns[TerritoryID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Output].ExternalColumns[TerritoryID]"
+                      lineageId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Output].Columns[TerritoryID]"
+                      name="TerritoryID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Output].Columns[Name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Output].ExternalColumns[Name]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Output].Columns[Name]"
+                      name="Name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Output].Columns[CountryRegionCode]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Output].ExternalColumns[CountryRegionCode]"
+                      length="3"
+                      lineageId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Output].Columns[CountryRegionCode]"
+                      name="CountryRegionCode"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Output].Columns[Group]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Output].ExternalColumns[Group]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Output].Columns[Group]"
+                      name="Group"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Output].Columns[SalesYTD]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Output].ExternalColumns[SalesYTD]"
+                      lineageId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Output].Columns[SalesYTD]"
+                      name="SalesYTD"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Output].Columns[SalesLastYear]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Output].ExternalColumns[SalesLastYear]"
+                      lineageId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Output].Columns[SalesLastYear]"
+                      name="SalesLastYear"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Output].Columns[CostYTD]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Output].ExternalColumns[CostYTD]"
+                      lineageId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Output].Columns[CostYTD]"
+                      name="CostYTD"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Output].Columns[CostLastYear]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Output].ExternalColumns[CostLastYear]"
+                      lineageId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Output].Columns[CostLastYear]"
+                      name="CostLastYear"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Output].Columns[rowguid]"
+                      dataType="guid"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Output].ExternalColumns[rowguid]"
+                      lineageId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Output].Columns[rowguid]"
+                      name="rowguid"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Output].Columns[ModifiedDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Output].ExternalColumns[ModifiedDate]"
+                      lineageId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Output].Columns[ModifiedDate]"
+                      name="ModifiedDate"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Output].ExternalColumns[TerritoryID]"
+                      dataType="i4"
+                      name="TerritoryID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Output].ExternalColumns[Name]"
+                      dataType="wstr"
+                      length="50"
+                      name="Name" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Output].ExternalColumns[CountryRegionCode]"
+                      dataType="wstr"
+                      length="3"
+                      name="CountryRegionCode" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Output].ExternalColumns[Group]"
+                      dataType="wstr"
+                      length="50"
+                      name="Group" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Output].ExternalColumns[SalesYTD]"
+                      dataType="cy"
+                      name="SalesYTD" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Output].ExternalColumns[SalesLastYear]"
+                      dataType="cy"
+                      name="SalesLastYear" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Output].ExternalColumns[CostYTD]"
+                      dataType="cy"
+                      name="CostYTD" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Output].ExternalColumns[CostLastYear]"
+                      dataType="cy"
+                      name="CostLastYear" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Output].ExternalColumns[rowguid]"
+                      dataType="guid"
+                      name="rowguid" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Output].ExternalColumns[ModifiedDate]"
+                      dataType="dbTimeStamp"
+                      name="ModifiedDate" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Error Output].Columns[TerritoryID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Error Output].Columns[TerritoryID]"
+                      name="TerritoryID" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Error Output].Columns[Name]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Error Output].Columns[Name]"
+                      name="Name" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Error Output].Columns[CountryRegionCode]"
+                      dataType="wstr"
+                      length="3"
+                      lineageId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Error Output].Columns[CountryRegionCode]"
+                      name="CountryRegionCode" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Error Output].Columns[Group]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Error Output].Columns[Group]"
+                      name="Group" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Error Output].Columns[SalesYTD]"
+                      dataType="cy"
+                      lineageId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Error Output].Columns[SalesYTD]"
+                      name="SalesYTD" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Error Output].Columns[SalesLastYear]"
+                      dataType="cy"
+                      lineageId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Error Output].Columns[SalesLastYear]"
+                      name="SalesLastYear" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Error Output].Columns[CostYTD]"
+                      dataType="cy"
+                      lineageId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Error Output].Columns[CostYTD]"
+                      name="CostYTD" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Error Output].Columns[CostLastYear]"
+                      dataType="cy"
+                      lineageId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Error Output].Columns[CostLastYear]"
+                      name="CostLastYear" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Error Output].Columns[rowguid]"
+                      dataType="guid"
+                      lineageId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Error Output].Columns[rowguid]"
+                      name="rowguid" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Error Output].Columns[ModifiedDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Error Output].Columns[ModifiedDate]"
+                      name="ModifiedDate" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Get Dim Terri_value"
+              componentClassID="Microsoft.Aggregate"
+              contactInfo="Aggregate;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;3"
+              description="Aggregates data with functions such as Average, Sum, Count, Max, and Min. For example, group data to compute the sum of sales per product or the average visits per day."
+              name="Get Dim Terri_value"
+              version="3">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the approximate number of group by keys that the aggregation produces. Low indicates 500,000 key values, Medium indicates 5 million key values, and High indicates more than 25 million key values. Unspecified indicates no KeyScale value is used."
+                  name="KeyScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the exact number of group by keys that the aggregation produces. If a KeyScale value is specified, the value in Keys takes precedence."
+                  name="Keys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the approximate number of distinct values in a column that the aggregation counts distinctly. Low indicates 500,000 key values, Medium indicates 5 million key values, and High indicates more than 25 million key values. Unspecified indicates no CountDistinctScale value is used."
+                  name="CountDistinctScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the exact number of distinct values in a column that the aggregation counts distinctly. If a CountDistinctScale value is specified, the value in CountDistinctKeys takes precedence."
+                  name="CountDistinctKeys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage by which memory can be extended during the aggregation. Valid values are between 1 and 100."
+                  name="AutoExtendFactor">25</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Get Dim Terri_value.Inputs[Aggregate Input 1]"
+                  name="Aggregate Input 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Get Dim Terri_value.Inputs[Aggregate Input 1].Columns[TerritoryID]"
+                      cachedDataType="i4"
+                      cachedName="TerritoryID"
+                      lineageId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].Columns[TerritoryID]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Get Dim Terri_value.Outputs[Aggregate Output 1]"
+                  name="Aggregate Output 1">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the approximate number of group by keys that the aggregation produces. Low indicates 500,000 key values, Medium indicates 5 million key values, and High indicates more than 25 million key values. Unspecified indicates no KeyScale value is used."
+                      name="KeyScale"
+                      typeConverter="KeyScaleType">0</property>
+                    <property
+                      dataType="System.Null"
+                      description="Specifies the exact number of group by keys that the aggregation produces. If a KeyScale value is specified, the value in Keys takes precedence."
+                      name="Keys" />
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get Dim Terri_value.Outputs[Aggregate Output 1].Columns[TerritoryID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Get Dim Terri_value.Outputs[Aggregate Output 1].Columns[TerritoryID]"
+                      name="TerritoryID">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output].Columns[TerritoryID]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Join to get Terri_info"
+              componentClassID="Microsoft.MergeJoin"
+              contactInfo="Merge Join;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combine two sorted data flows into one using the FULL, LEFT, or INNER join. We recommend this transformation when data flows can be sorted at their sources."
+              name="Join to get Terri_info"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of join to perform."
+                  name="JoinType"
+                  typeConverter="JoinType">2</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the number of columns in the ordering key."
+                  name="NumKeyColumns">1</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the null values are treated as equal values."
+                  name="TreatNullsAsEqual">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Indicates the requested maximum buffers per input before blocking."
+                  name="MaxBuffersPerInput">5</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Join to get Terri_info.Inputs[Merge Join Left Input]"
+                  hasSideEffects="true"
+                  name="Merge Join Left Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Join to get Terri_info.Inputs[Merge Join Left Input].Columns[TerritoryID]"
+                      cachedDataType="i4"
+                      cachedName="TerritoryID"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[TerritoryID]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Data Flow Task\Join to get Terri_info.Inputs[Merge Join Right Input]"
+                  hasSideEffects="true"
+                  name="Merge Join Right Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Join to get Terri_info.Inputs[Merge Join Right Input].Columns[TerritoryID]"
+                      cachedDataType="i4"
+                      cachedName="TerritoryID"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[TerritoryID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Join to get Terri_info.Inputs[Merge Join Right Input].Columns[Name]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Name"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[Name]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Join to get Terri_info.Inputs[Merge Join Right Input].Columns[CountryRegionCode]"
+                      cachedDataType="wstr"
+                      cachedLength="3"
+                      cachedName="CountryRegionCode"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[CountryRegionCode]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Join to get Terri_info.Outputs[Merge Join Output]"
+                  isSorted="true"
+                  name="Merge Join Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Join to get Terri_info.Outputs[Merge Join Output].Columns[TerritoryID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Join to get Terri_info.Outputs[Merge Join Output].Columns[TerritoryID]"
+                      name="TerritoryID"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task\Join to get Terri_info.Inputs[Merge Join Left Input].Columns[TerritoryID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Join to get Terri_info.Outputs[Merge Join Output].Columns[Name]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Join to get Terri_info.Outputs[Merge Join Output].Columns[Name]"
+                      name="Name">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task\Join to get Terri_info.Inputs[Merge Join Right Input].Columns[Name]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Join to get Terri_info.Outputs[Merge Join Output].Columns[CountryRegionCode]"
+                      dataType="wstr"
+                      length="3"
+                      lineageId="Package\Data Flow Task\Join to get Terri_info.Outputs[Merge Join Output].Columns[CountryRegionCode]"
+                      name="CountryRegionCode">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task\Join to get Terri_info.Inputs[Merge Join Right Input].Columns[CountryRegionCode]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Load to Stag Dim_Terri"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Load to Stag Dim_Terri"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[StageDimTerritory]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Load to Stag Dim_Terri.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LAPTOP-21D4TOM5\SQLEXPRESS.Staging_area]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-21D4TOM5\SQLEXPRESS.Staging_area]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Load to Stag Dim_Terri.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Load to Stag Dim_Terri.Inputs[OLE DB Destination Input].Columns[TerritoryID]"
+                      cachedDataType="i4"
+                      cachedName="TerritoryID"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\Data Flow Task\Load to Stag Dim_Terri.Inputs[OLE DB Destination Input].ExternalColumns[TerritoryID]"
+                      lineageId="Package\Data Flow Task\Join to get Terri_info.Outputs[Merge Join Output].Columns[TerritoryID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Load to Stag Dim_Terri.Inputs[OLE DB Destination Input].Columns[Name]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Name"
+                      externalMetadataColumnId="Package\Data Flow Task\Load to Stag Dim_Terri.Inputs[OLE DB Destination Input].ExternalColumns[Name]"
+                      lineageId="Package\Data Flow Task\Join to get Terri_info.Outputs[Merge Join Output].Columns[Name]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Load to Stag Dim_Terri.Inputs[OLE DB Destination Input].Columns[CountryRegionCode]"
+                      cachedDataType="wstr"
+                      cachedLength="3"
+                      cachedName="CountryRegionCode"
+                      externalMetadataColumnId="Package\Data Flow Task\Load to Stag Dim_Terri.Inputs[OLE DB Destination Input].ExternalColumns[CountryRegionCode]"
+                      lineageId="Package\Data Flow Task\Join to get Terri_info.Outputs[Merge Join Output].Columns[CountryRegionCode]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Load to Stag Dim_Terri.Inputs[OLE DB Destination Input].ExternalColumns[TerritoryID]"
+                      dataType="i4"
+                      name="TerritoryID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Load to Stag Dim_Terri.Inputs[OLE DB Destination Input].ExternalColumns[Name]"
+                      dataType="wstr"
+                      length="50"
+                      name="Name" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Load to Stag Dim_Terri.Inputs[OLE DB Destination Input].ExternalColumns[CountryRegionCode]"
+                      dataType="wstr"
+                      length="3"
+                      name="CountryRegionCode" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Load to Stag Dim_Terri.Inputs[OLE DB Destination Input].ExternalColumns[TerritoryKey]"
+                      dataType="i4"
+                      name="TerritoryKey" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Load to Stag Dim_Terri.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\Load to Stag Dim_Terri.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Load to Stag Dim_Terri.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Load to Stag Dim_Terri.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Load to Stag Dim_Terri.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Load to Stag Dim_Terri.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Multicast"
+              componentClassID="Microsoft.Multicast"
+              contactInfo="Multicast;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Distributes every input row to every row in one or more outputs. For example, branch your data flow to make a copy of data so that some values can be masked before sharing with external partners."
+              name="Multicast">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Multicast.Inputs[Multicast Input 1]"
+                  name="Multicast Input 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Multicast.Outputs[Multicast Output 1]"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 1"
+                  synchronousInputId="Package\Data Flow Task\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Multicast.Outputs[Multicast Output 2]"
+                  dangling="true"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 2"
+                  synchronousInputId="Package\Data Flow Task\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Sort"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Sort.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[TerritoryID]"
+                      cachedDataType="i4"
+                      cachedName="TerritoryID"
+                      lineageId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Output].Columns[TerritoryID]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[Name]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Name"
+                      lineageId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Output].Columns[Name]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[CountryRegionCode]"
+                      cachedDataType="wstr"
+                      cachedLength="3"
+                      cachedName="CountryRegionCode"
+                      lineageId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Output].Columns[CountryRegionCode]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[Group]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Group"
+                      lineageId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Output].Columns[Group]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[SalesYTD]"
+                      cachedDataType="cy"
+                      cachedName="SalesYTD"
+                      lineageId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Output].Columns[SalesYTD]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[SalesLastYear]"
+                      cachedDataType="cy"
+                      cachedName="SalesLastYear"
+                      lineageId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Output].Columns[SalesLastYear]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[CostYTD]"
+                      cachedDataType="cy"
+                      cachedName="CostYTD"
+                      lineageId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Output].Columns[CostYTD]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[CostLastYear]"
+                      cachedDataType="cy"
+                      cachedName="CostLastYear"
+                      lineageId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Output].Columns[CostLastYear]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[rowguid]"
+                      cachedDataType="guid"
+                      cachedName="rowguid"
+                      lineageId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Output].Columns[rowguid]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[ModifiedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="ModifiedDate"
+                      lineageId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Output].Columns[ModifiedDate]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Sort.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[TerritoryID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[TerritoryID]"
+                      name="TerritoryID"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Output].Columns[TerritoryID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[Name]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[Name]"
+                      name="Name">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Output].Columns[Name]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[CountryRegionCode]"
+                      dataType="wstr"
+                      length="3"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[CountryRegionCode]"
+                      name="CountryRegionCode">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Output].Columns[CountryRegionCode]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[Group]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[Group]"
+                      name="Group">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Output].Columns[Group]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[SalesYTD]"
+                      dataType="cy"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[SalesYTD]"
+                      name="SalesYTD">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Output].Columns[SalesYTD]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[SalesLastYear]"
+                      dataType="cy"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[SalesLastYear]"
+                      name="SalesLastYear">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Output].Columns[SalesLastYear]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[CostYTD]"
+                      dataType="cy"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[CostYTD]"
+                      name="CostYTD">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Output].Columns[CostYTD]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[CostLastYear]"
+                      dataType="cy"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[CostLastYear]"
+                      name="CostLastYear">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Output].Columns[CostLastYear]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[rowguid]"
+                      dataType="guid"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[rowguid]"
+                      name="rowguid">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Output].Columns[rowguid]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[ModifiedDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[ModifiedDate]"
+                      name="ModifiedDate">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Output].Columns[ModifiedDate]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Sort 1"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort 1"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Sort 1.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort 1.Inputs[Sort Input].Columns[TerritoryID]"
+                      cachedDataType="i4"
+                      cachedName="TerritoryID"
+                      lineageId="Package\Data Flow Task\Get Dim Terri_value.Outputs[Aggregate Output 1].Columns[TerritoryID]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Sort 1.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[TerritoryID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[TerritoryID]"
+                      name="TerritoryID"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Get Dim Terri_value.Outputs[Aggregate Output 1].Columns[TerritoryID]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task.Paths[Aggregate Output 1]"
+              endId="Package\Data Flow Task\Sort 1.Inputs[Sort Input]"
+              name="Aggregate Output 1"
+              startId="Package\Data Flow Task\Get Dim Terri_value.Outputs[Aggregate Output 1]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Merge Join Output]"
+              endId="Package\Data Flow Task\Load to Stag Dim_Terri.Inputs[OLE DB Destination Input]"
+              name="Merge Join Output"
+              startId="Package\Data Flow Task\Join to get Terri_info.Outputs[Merge Join Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Multicast Output 1]"
+              endId="Package\Data Flow Task\Get Dim Terri_value.Inputs[Aggregate Input 1]"
+              name="Multicast Output 1"
+              startId="Package\Data Flow Task\Multicast.Outputs[Multicast Output 1]" />
+            <path
+              refId="Package\Data Flow Task.Paths[OLE DB Source Output]"
+              endId="Package\Data Flow Task\Sort.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\Data Flow Task\Extract stage territory.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[OLE DB Source Output1]"
+              endId="Package\Data Flow Task\Multicast.Inputs[Multicast Input 1]"
+              name="OLE DB Source Output"
+              startId="Package\Data Flow Task\Extract stage Order Header.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Sort Output]"
+              endId="Package\Data Flow Task\Join to get Terri_info.Inputs[Merge Join Right Input]"
+              name="Sort Output"
+              startId="Package\Data Flow Task\Sort.Outputs[Sort Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Sort Output1]"
+              endId="Package\Data Flow Task\Join to get Terri_info.Inputs[Merge Join Left Input]"
+              name="Sort Output"
+              startId="Package\Data Flow Task\Sort 1.Outputs[Sort Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\Extract Data from Source"
       DTS:CreationName="Microsoft.Pipeline"
@@ -8905,44 +10600,44 @@ where [refTable].[RevisionNumber] = ? and [refTable].[OrderDate] = ? and [refTab
               startId="Package\Extract Data from Source\Lookup 6.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Extract Data from Source.Paths[Lookup No Match Output7]"
-              endId="Package\Extract Data from Source\Insert new Records.Inputs[OLE DB Destination Input]"
-              name="Lookup No Match Output"
-              startId="Package\Extract Data from Source\Lookup 1.Outputs[Lookup No Match Output]" />
-            <path
-              refId="Package\Extract Data from Source.Paths[Lookup No Match Output6]"
-              endId="Package\Extract Data from Source\Update changing records.Inputs[OLE DB Command Input]"
-              name="Lookup No Match Output"
-              startId="Package\Extract Data from Source\Lookup 2.Outputs[Lookup No Match Output]" />
-            <path
-              refId="Package\Extract Data from Source.Paths[Lookup No Match Output4]"
-              endId="Package\Extract Data from Source\OLE DB Destination.Inputs[OLE DB Destination Input]"
-              name="Lookup No Match Output"
-              startId="Package\Extract Data from Source\Lookup.Outputs[Lookup No Match Output]" />
-            <path
-              refId="Package\Extract Data from Source.Paths[Lookup No Match Output5]"
-              endId="Package\Extract Data from Source\OLE DB Command 4.Inputs[OLE DB Command Input]"
-              name="Lookup No Match Output"
-              startId="Package\Extract Data from Source\Lookup 7.Outputs[Lookup No Match Output]" />
-            <path
-              refId="Package\Extract Data from Source.Paths[Lookup No Match Output2]"
-              endId="Package\Extract Data from Source\Insert Destination 2.Inputs[OLE DB Destination Input]"
-              name="Lookup No Match Output"
-              startId="Package\Extract Data from Source\Lookup 4.Outputs[Lookup No Match Output]" />
-            <path
-              refId="Package\Extract Data from Source.Paths[Lookup No Match Output1]"
               endId="Package\Extract Data from Source\OLE DB Command 3.Inputs[OLE DB Command Input]"
               name="Lookup No Match Output"
               startId="Package\Extract Data from Source\Lookup 5.Outputs[Lookup No Match Output]" />
             <path
-              refId="Package\Extract Data from Source.Paths[Lookup No Match Output]"
+              refId="Package\Extract Data from Source.Paths[Lookup No Match Output6]"
+              endId="Package\Extract Data from Source\OLE DB Command 2.Inputs[OLE DB Command Input]"
+              name="Lookup No Match Output"
+              startId="Package\Extract Data from Source\Lookup 3.Outputs[Lookup No Match Output]" />
+            <path
+              refId="Package\Extract Data from Source.Paths[Lookup No Match Output4]"
+              endId="Package\Extract Data from Source\Insert Destination 2.Inputs[OLE DB Destination Input]"
+              name="Lookup No Match Output"
+              startId="Package\Extract Data from Source\Lookup 4.Outputs[Lookup No Match Output]" />
+            <path
+              refId="Package\Extract Data from Source.Paths[Lookup No Match Output5]"
               endId="Package\Extract Data from Source\Insert Destination 3.Inputs[OLE DB Destination Input]"
               name="Lookup No Match Output"
               startId="Package\Extract Data from Source\Lookup 6.Outputs[Lookup No Match Output]" />
             <path
-              refId="Package\Extract Data from Source.Paths[Lookup No Match Output3]"
-              endId="Package\Extract Data from Source\OLE DB Command 2.Inputs[OLE DB Command Input]"
+              refId="Package\Extract Data from Source.Paths[Lookup No Match Output2]"
+              endId="Package\Extract Data from Source\OLE DB Destination.Inputs[OLE DB Destination Input]"
               name="Lookup No Match Output"
-              startId="Package\Extract Data from Source\Lookup 3.Outputs[Lookup No Match Output]" />
+              startId="Package\Extract Data from Source\Lookup.Outputs[Lookup No Match Output]" />
+            <path
+              refId="Package\Extract Data from Source.Paths[Lookup No Match Output1]"
+              endId="Package\Extract Data from Source\Insert new Records.Inputs[OLE DB Destination Input]"
+              name="Lookup No Match Output"
+              startId="Package\Extract Data from Source\Lookup 1.Outputs[Lookup No Match Output]" />
+            <path
+              refId="Package\Extract Data from Source.Paths[Lookup No Match Output]"
+              endId="Package\Extract Data from Source\OLE DB Command 4.Inputs[OLE DB Command Input]"
+              name="Lookup No Match Output"
+              startId="Package\Extract Data from Source\Lookup 7.Outputs[Lookup No Match Output]" />
+            <path
+              refId="Package\Extract Data from Source.Paths[Lookup No Match Output3]"
+              endId="Package\Extract Data from Source\Update changing records.Inputs[OLE DB Command Input]"
+              name="Lookup No Match Output"
+              startId="Package\Extract Data from Source\Lookup 2.Outputs[Lookup No Match Output]" />
             <path
               refId="Package\Extract Data from Source.Paths[New Output]"
               endId="Package\Extract Data from Source\Insert Destination 1.Inputs[OLE DB Destination Input]"
@@ -8960,34 +10655,34 @@ where [refTable].[RevisionNumber] = ? and [refTable].[OrderDate] = ? and [refTab
               startId="Package\Extract Data from Source\Slowly Changing Dimension 1.Outputs[New Output]" />
             <path
               refId="Package\Extract Data from Source.Paths[OLE DB Source Output5]"
-              endId="Package\Extract Data from Source\Slowly Changing Dimension 2.Inputs[Slowly Changing Dimension Input]"
-              name="OLE DB Source Output"
-              startId="Package\Extract Data from Source\3 Extract Product Sub Category.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\Extract Data from Source.Paths[OLE DB Source Output]"
-              endId="Package\Extract Data from Source\Lookup 1.Inputs[Lookup Input]"
-              name="OLE DB Source Output"
-              startId="Package\Extract Data from Source\2 Extract Territory.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\Extract Data from Source.Paths[OLE DB Source Output1]"
-              endId="Package\Extract Data from Source\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input]"
-              name="OLE DB Source Output"
-              startId="Package\Extract Data from Source\1 Extract Product.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\Extract Data from Source.Paths[OLE DB Source Output2]"
               endId="Package\Extract Data from Source\Lookup.Inputs[Lookup Input]"
               name="OLE DB Source Output"
               startId="Package\Extract Data from Source\5 Extract Person.Outputs[OLE DB Source Output]" />
             <path
-              refId="Package\Extract Data from Source.Paths[OLE DB Source Output3]"
+              refId="Package\Extract Data from Source.Paths[OLE DB Source Output]"
               endId="Package\Extract Data from Source\Lookup 4.Inputs[Lookup Input]"
               name="OLE DB Source Output"
               startId="Package\Extract Data from Source\6 Extract Sale Order details.Outputs[OLE DB Source Output]" />
             <path
-              refId="Package\Extract Data from Source.Paths[OLE DB Source Output4]"
+              refId="Package\Extract Data from Source.Paths[OLE DB Source Output1]"
               endId="Package\Extract Data from Source\Lookup 6.Inputs[Lookup Input]"
               name="OLE DB Source Output"
               startId="Package\Extract Data from Source\7 Extract Sale Order Header.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Extract Data from Source.Paths[OLE DB Source Output2]"
+              endId="Package\Extract Data from Source\Slowly Changing Dimension 2.Inputs[Slowly Changing Dimension Input]"
+              name="OLE DB Source Output"
+              startId="Package\Extract Data from Source\3 Extract Product Sub Category.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Extract Data from Source.Paths[OLE DB Source Output3]"
+              endId="Package\Extract Data from Source\Lookup 1.Inputs[Lookup Input]"
+              name="OLE DB Source Output"
+              startId="Package\Extract Data from Source\2 Extract Territory.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Extract Data from Source.Paths[OLE DB Source Output4]"
+              endId="Package\Extract Data from Source\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input]"
+              name="OLE DB Source Output"
+              startId="Package\Extract Data from Source\1 Extract Product.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\Extract Data from Source.Paths[OLE DB Source Output6]"
               endId="Package\Extract Data from Source\Slowly Changing Dimension 3.Inputs[Slowly Changing Dimension Input]"
@@ -8997,31 +10692,16 @@ where [refTable].[RevisionNumber] = ? and [refTable].[OrderDate] = ? and [refTab
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
-    <DTS:Executable
-      DTS:refId="Package\Transform Data"
-      DTS:CreationName="Microsoft.Pipeline"
-      DTS:Description="Data Flow Task"
-      DTS:DTSID="{A80C5D79-4972-4069-A4A0-2A9E3BA174F2}"
-      DTS:ExecutableType="Microsoft.Pipeline"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="Transform Data"
-      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <pipeline
-          version="1" />
-      </DTS:ObjectData>
-    </DTS:Executable>
   </DTS:Executables>
   <DTS:PrecedenceConstraints>
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
-      DTS:DTSID="{4241B90C-F2B9-46DA-8746-A49D35B59936}"
+      DTS:DTSID="{C8DFE0A6-8B19-4D2E-A10C-C6E8CF54CE89}"
       DTS:From="Package\Extract Data from Source"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
-      DTS:To="Package\Transform Data" />
+      DTS:To="Package\Data Flow Task" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -9036,39 +10716,39 @@ where [refTable].[RevisionNumber] = ? and [refTable].[OrderDate] = ? and [refTab
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="150.4,41.6"
+          Id="Package\Data Flow Task"
+          TopLeft="297.499983745317,175.933332109915" />
+        <NodeLayout
           Size="194.4,41.6"
           Id="Package\Extract Data from Source"
           TopLeft="325.833315530586,51.1333329777585" />
-        <NodeLayout
-          Size="150.4,41.6"
-          Id="Package\Transform Data"
-          TopLeft="286.666651003891,179.399998752475" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="423.033315530586,92.7333329777585">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-61.1666645266948,86.6666657747163"
+              EndConnector="-50.3333317852685,83.1999991321565"
               Start="0,0"
-              End="-61.1666645266948,79.1666657747163">
+              End="-50.3333317852685,75.6999991321565">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,39.3333328873582" />
+                    End="0,37.5999995660782" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,39.3333328873582"
-                    Point2="0,43.3333328873582"
-                    Point3="-4,43.3333328873582" />
+                    Point1="0,37.5999995660782"
+                    Point2="0,41.5999995660782"
+                    Point3="-4,41.5999995660782" />
                   <mssgle:LineSegment
-                    End="-57.1666645266948,43.3333328873582" />
+                    End="-46.3333317852685,41.5999995660782" />
                   <mssgle:CubicBezierSegment
-                    Point1="-57.1666645266948,43.3333328873582"
-                    Point2="-61.1666645266948,43.3333328873582"
-                    Point3="-61.1666645266948,47.3333328873582" />
+                    Point1="-46.3333317852685,41.5999995660782"
+                    Point2="-50.3333317852685,41.5999995660782"
+                    Point3="-50.3333317852685,45.5999995660782" />
                   <mssgle:LineSegment
-                    End="-61.1666645266948,79.1666657747163" />
+                    End="-50.3333317852685,75.6999991321565" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -9080,6 +10760,299 @@ where [refTable].[RevisionNumber] = ? and [refTable].[OrderDate] = ? and [refTab
       </GraphLayout>
     </LayoutInfo>
   </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="97.6,41.6"
+          Id="Package\Data Flow Task\Sort"
+          TopLeft="544.999970222514,252.199998246233" />
+        <NodeLayout
+          Size="185.6,41.6"
+          Id="Package\Data Flow Task\Load to Stag Dim_Terri"
+          TopLeft="371.49998999387,471.866662225061" />
+        <NodeLayout
+          Size="176.8,41.6"
+          Id="Package\Data Flow Task\Extract stage territory"
+          TopLeft="501.499985076487,61.1999965465072" />
+        <NodeLayout
+          Size="119.2,41.6"
+          Id="Package\Data Flow Task\Multicast"
+          TopLeft="147.499991940956,147.333332308796" />
+        <NodeLayout
+          Size="106.4,41.6"
+          Id="Package\Data Flow Task\Sort 1"
+          TopLeft="162.499991121392,344.93333093471" />
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\Data Flow Task\Get Dim Terri_value"
+          TopLeft="135.833325911728,270.399998119672" />
+        <NodeLayout
+          Size="172.8,41.6"
+          Id="Package\Data Flow Task\Join to get Terri_info"
+          TopLeft="349.999980876844,367.86666414751" />
+        <NodeLayout
+          Size="204.8,41.6"
+          Id="Package\Data Flow Task\Extract stage Order Header"
+          TopLeft="94.166661521627,48.5333329958386" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[OLE DB Source Output1]"
+          TopLeft="196.566661521627,90.1333329958386">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="10.5333304193286,57.1999993129572"
+              Start="0,0"
+              End="10.5333304193286,49.6999993129572">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.5999996564786" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.5999996564786"
+                    Point2="0,28.5999996564786"
+                    Point3="4,28.5999996564786" />
+                  <mssgle:LineSegment
+                    End="6.53333041932865,28.5999996564786" />
+                  <mssgle:CubicBezierSegment
+                    Point1="6.53333041932865,28.5999996564786"
+                    Point2="10.5333304193286,28.5999996564786"
+                    Point3="10.5333304193286,32.5999996564786" />
+                  <mssgle:LineSegment
+                    End="10.5333304193286,49.6999993129572" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
+          TopLeft="591.849977649501,102.799996546507">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,149.400001699726"
+              Start="0,0"
+              End="0,141.900001699726">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,141.900001699726" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Multicast Output 1]"
+          TopLeft="207.099991940956,188.933332308796">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="14.3333339707718,81.4666658108764"
+              Start="0,0"
+              End="14.3333339707718,73.9666658108764">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.7333329054382" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,36.7333329054382"
+                    Point2="0,40.7333329054382"
+                    Point3="4,40.7333329054382" />
+                  <mssgle:LineSegment
+                    End="10.3333339707718,40.7333329054382" />
+                  <mssgle:CubicBezierSegment
+                    Point1="10.3333339707718,40.7333329054382"
+                    Point2="14.3333339707718,40.7333329054382"
+                    Point3="14.3333339707718,44.7333329054382" />
+                  <mssgle:LineSegment
+                    End="14.3333339707718,73.9666658108764" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Merge Join Output]"
+          TopLeft="436.399980876844,409.46666414751">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="27.900009117026,62.399998077551"
+              Start="0,0"
+              End="27.900009117026,54.899998077551">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.1999990387755" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,27.1999990387755"
+                    Point2="0,31.1999990387755"
+                    Point3="4,31.1999990387755" />
+                  <mssgle:LineSegment
+                    End="23.900009117026,31.1999990387755" />
+                  <mssgle:CubicBezierSegment
+                    Point1="23.900009117026,31.1999990387755"
+                    Point2="27.900009117026,31.1999990387755"
+                    Point3="27.900009117026,35.1999990387755" />
+                  <mssgle:LineSegment
+                    End="27.900009117026,54.899998077551" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Aggregate Output 1]"
+          TopLeft="218.56665851656,311.999998119672">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,32.9333328150378"
+              Start="0,0"
+              End="0,25.4333328150378">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.4333328150378" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Sort Output1]"
+          TopLeft="268.899991121392,365.73333093471">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="81.099989755452,22.9333332127995"
+              Start="0,0"
+              End="73.599989755452,22.9333332127995">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="36.549994877726,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="36.549994877726,0"
+                    Point2="40.549994877726,0"
+                    Point3="40.549994877726,4" />
+                  <mssgle:LineSegment
+                    End="40.549994877726,18.9333332127995" />
+                  <mssgle:CubicBezierSegment
+                    Point1="40.549994877726,18.9333332127995"
+                    Point2="40.549994877726,22.9333332127995"
+                    Point3="44.549994877726,22.9333332127995" />
+                  <mssgle:LineSegment
+                    End="73.599989755452,22.9333332127995" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Sort Output]"
+          TopLeft="593.799970222514,293.799998246233">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-157.399989345671,74.0666659012768"
+              Start="0,0"
+              End="-157.399989345671,66.5666659012768">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.0333329506384" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,33.0333329506384"
+                    Point2="0,37.0333329506384"
+                    Point3="-4,37.0333329506384" />
+                  <mssgle:LineSegment
+                    End="-153.399989345671,37.0333329506384" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-153.399989345671,37.0333329506384"
+                    Point2="-157.399989345671,37.0333329506384"
+                    Point3="-157.399989345671,41.0333329506384" />
+                  <mssgle:LineSegment
+                    End="-157.399989345671,66.5666659012768" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Load to Stag Dim_Terri">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Extract stage territory">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Extract stage Order Header">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Extract Data from Source">
     <LayoutInfo>
@@ -9286,44 +11259,8 @@ where [refTable].[RevisionNumber] = ? and [refTable].[OrderDate] = ? and [refTab
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extract Data from Source.Paths[Lookup No Match Output7]"
-          TopLeft="997.3,148.7">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-186.2,60.0000000000001"
-              Start="0,0"
-              End="-186.2,52.5000000000001">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,20.4705882352942" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,20.4705882352942"
-                    Point2="0,24.4705882352942"
-                    Point3="-4,24.4705882352942" />
-                  <mssgle:LineSegment
-                    End="-182.2,24.4705882352942" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-182.2,24.4705882352942"
-                    Point2="-186.2,24.4705882352942"
-                    Point3="-186.2,28.4705882352942" />
-                  <mssgle:LineSegment
-                    End="-186.2,52.5000000000001" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-148.90638671875,29.4705882352942,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\Extract Data from Source.Paths[Lookup No Match Output6]"
-          TopLeft="1016.1,250.3">
+          TopLeft="1760.1,250.3">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -9347,6 +11284,102 @@ where [refTable].[RevisionNumber] = ? and [refTable].[OrderDate] = ? and [refTab
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Extract Data from Source.Paths[Lookup No Match Output5]"
+          TopLeft="2624.33328971433,255.666665178074">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-221.233289714326,54.6333348219264"
+              Start="0,0"
+              End="-221.233289714326,47.1333348219264">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.3166674109632" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,23.3166674109632"
+                    Point2="0,27.3166674109632"
+                    Point3="-4,27.3166674109632" />
+                  <mssgle:LineSegment
+                    End="-217.233289714326,27.3166674109632" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-217.233289714326,27.3166674109632"
+                    Point2="-221.233289714326,27.3166674109632"
+                    Point3="-221.233289714326,31.3166674109632" />
+                  <mssgle:LineSegment
+                    End="-221.233289714326,47.1333348219264" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-166.423031575913,32.3166674109632,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Extract Data from Source.Paths[Lookup No Match Output7]"
+          TopLeft="2170.1,250.3">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-55.80638671875,20.4453125,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Extract Data from Source.Paths[Lookup No Match Output4]"
+          TopLeft="1946.3,148.7">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="18.8000000000002,60.0000000000001"
+              Start="0,0"
+              End="18.8000000000002,52.5000000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.4705882352941" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.4705882352941"
+                    Point2="0,24.4705882352941"
+                    Point3="4,24.4705882352941" />
+                  <mssgle:LineSegment
+                    End="14.8000000000002,24.4705882352941" />
+                  <mssgle:CubicBezierSegment
+                    Point1="14.8000000000002,24.4705882352941"
+                    Point2="18.8000000000002,24.4705882352941"
+                    Point3="18.8000000000002,28.4705882352941" />
+                  <mssgle:LineSegment
+                    End="18.8000000000002,52.5000000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-46.4063867187499,29.4705882352941,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Extract Data from Source.Paths[Lookup No Match Output]"
           TopLeft="2788.89995342146,356.199997812311">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -9382,7 +11415,7 @@ where [refTable].[RevisionNumber] = ? and [refTable].[OrderDate] = ? and [refTab
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extract Data from Source.Paths[Lookup No Match Output4]"
+          Id="Package\Extract Data from Source.Paths[Lookup No Match Output2]"
           TopLeft="1535.63333333333,148.7">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -9419,7 +11452,7 @@ where [refTable].[RevisionNumber] = ? and [refTable].[OrderDate] = ? and [refTab
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Extract Data from Source.Paths[Lookup No Match Output3]"
-          TopLeft="1760.1,250.3">
+          TopLeft="1016.1,250.3">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -9438,102 +11471,42 @@ where [refTable].[RevisionNumber] = ? and [refTable].[OrderDate] = ? and [refTab
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
               BoundingBox="-55.80638671875,20.4453125,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Extract Data from Source.Paths[Lookup No Match Output2]"
-          TopLeft="1946.3,148.7">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="18.8000000000002,60.0000000000001"
-              Start="0,0"
-              End="18.8000000000002,52.5000000000001">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,20.4705882352941" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,20.4705882352941"
-                    Point2="0,24.4705882352941"
-                    Point3="4,24.4705882352941" />
-                  <mssgle:LineSegment
-                    End="14.8000000000002,24.4705882352941" />
-                  <mssgle:CubicBezierSegment
-                    Point1="14.8000000000002,24.4705882352941"
-                    Point2="18.8000000000002,24.4705882352941"
-                    Point3="18.8000000000002,28.4705882352941" />
-                  <mssgle:LineSegment
-                    End="18.8000000000002,52.5000000000001" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-46.4063867187499,29.4705882352941,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Extract Data from Source.Paths[Lookup No Match Output1]"
-          TopLeft="2170.1,250.3">
+          TopLeft="997.3,148.7">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60"
+              EndConnector="-186.2,60.0000000000001"
               Start="0,0"
-              End="0,52.5">
+              End="-186.2,52.5000000000001">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5" />
+                    End="0,20.4705882352942" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.4705882352942"
+                    Point2="0,24.4705882352942"
+                    Point3="-4,24.4705882352942" />
+                  <mssgle:LineSegment
+                    End="-182.2,24.4705882352942" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-182.2,24.4705882352942"
+                    Point2="-186.2,24.4705882352942"
+                    Point3="-186.2,28.4705882352942" />
+                  <mssgle:LineSegment
+                    End="-186.2,52.5000000000001" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-55.80638671875,20.4453125,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Extract Data from Source.Paths[Lookup No Match Output]"
-          TopLeft="2624.33328971433,255.666665178074">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-221.233289714326,54.6333348219264"
-              Start="0,0"
-              End="-221.233289714326,47.1333348219264">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,23.3166674109632" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,23.3166674109632"
-                    Point2="0,27.3166674109632"
-                    Point3="-4,27.3166674109632" />
-                  <mssgle:LineSegment
-                    End="-217.233289714326,27.3166674109632" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-217.233289714326,27.3166674109632"
-                    Point2="-221.233289714326,27.3166674109632"
-                    Point3="-221.233289714326,31.3166674109632" />
-                  <mssgle:LineSegment
-                    End="-221.233289714326,47.1333348219264" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-166.423031575913,32.3166674109632,111.6127734375,11.609375"
+              BoundingBox="-148.90638671875,29.4705882352942,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -9569,7 +11542,7 @@ where [refTable].[RevisionNumber] = ? and [refTable].[OrderDate] = ? and [refTab
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="24.6919451348153,29.0355552704341,96.3827734375,11.609375"
+              BoundingBox="24.6919451348155,29.0355552704341,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -9605,7 +11578,7 @@ where [refTable].[RevisionNumber] = ? and [refTable].[OrderDate] = ? and [refTab
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="46.5752799479168,29.5034965034966,96.3827734375,11.609375"
+              BoundingBox="46.575279947917,29.5034965034966,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -9800,29 +11773,7 @@ where [refTable].[RevisionNumber] = ? and [refTable].[OrderDate] = ? and [refTab
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extract Data from Source.Paths[OLE DB Source Output5]"
-          TopLeft="281.1,148.7">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60.0000000000001"
-              Start="0,0"
-              End="0,52.5000000000001">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5000000000001" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Extract Data from Source.Paths[OLE DB Source Output4]"
+          Id="Package\Extract Data from Source.Paths[OLE DB Source Output1]"
           TopLeft="2664.5,148.7">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -9856,7 +11807,7 @@ where [refTable].[RevisionNumber] = ? and [refTable].[OrderDate] = ? and [refTab
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extract Data from Source.Paths[OLE DB Source Output3]"
+          Id="Package\Extract Data from Source.Paths[OLE DB Source Output]"
           TopLeft="1965.1,47.0999999999998">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -9878,7 +11829,7 @@ where [refTable].[RevisionNumber] = ? and [refTable].[OrderDate] = ? and [refTab
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extract Data from Source.Paths[OLE DB Source Output2]"
+          Id="Package\Extract Data from Source.Paths[OLE DB Source Output5]"
           TopLeft="1553.1,47.0999999999998">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -9900,7 +11851,7 @@ where [refTable].[RevisionNumber] = ? and [refTable].[OrderDate] = ? and [refTab
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extract Data from Source.Paths[OLE DB Source Output1]"
+          Id="Package\Extract Data from Source.Paths[OLE DB Source Output4]"
           TopLeft="1298.1,148.7">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -9922,8 +11873,30 @@ where [refTable].[RevisionNumber] = ? and [refTable].[OrderDate] = ? and [refTab
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extract Data from Source.Paths[OLE DB Source Output]"
+          Id="Package\Extract Data from Source.Paths[OLE DB Source Output3]"
           TopLeft="1016.1,47.1">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60.0000000000001"
+              Start="0,0"
+              End="0,52.5000000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5000000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Extract Data from Source.Paths[OLE DB Source Output2]"
+          TopLeft="281.1,148.7">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
