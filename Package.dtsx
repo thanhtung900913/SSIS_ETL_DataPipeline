@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="50"
-  DTS:VersionGUID="{5D1DE4DE-9F48-45FE-B160-EC99581990CE}">
+  DTS:VersionBuild="51"
+  DTS:VersionGUID="{B73AB522-1872-4935-8924-F5210DBFD53A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -5297,7 +5297,6 @@ where [refTable].[Month] = ?</property>
       DTS:refId="Package\Extract Data from Source"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:Disabled="True"
       DTS:DTSID="{9638786F-1935-4B7A-9944-D58291010861}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
