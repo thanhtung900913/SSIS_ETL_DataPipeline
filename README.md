@@ -48,7 +48,7 @@ This project demonstrates how to use SQL Server Integration Services (SSIS) to b
    - **Load**: Load the transformed data into the Data Warehouse.
       ![ETL Process Diagram](images/ETL6.png "Load data to Data Warehouse")
 3. **Data Warehouse Design**:
-   - A star schema is created with fact and dimension tables.
+   - A snowflake schema is created with fact and dimension tables.
    - Optimized for query performance and reporting.
    ![ETL Process Diagram](images/ETL9.png "Data Warehouse Diagram")
 4. **Reporting**:
