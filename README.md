@@ -13,7 +13,6 @@ This project demonstrates how to use SQL Server Integration Services (SSIS) to b
   - Business logic is implemented to structure the data for reporting purposes.
 - **Data Loading**:
   - Transformed data is loaded into a structured **Data Warehouse** designed for analytics and reporting.
-  ![ETL Process Diagram](images/ETL6.png "Load data to Data Warehouse")
 - **Reporting**:
   - Reports are built on the Data Warehouse using visualization tools to showcase actionable insights.
 
@@ -47,6 +46,7 @@ This project demonstrates how to use SQL Server Integration Services (SSIS) to b
      ![ETL Process Diagram](images/ETL2.png "Transform data 1")
      ![ETL Process Diagram](images/ETL3.png "Transform data 2")
    - **Load**: Load the transformed data into the Data Warehouse.
+      ![ETL Process Diagram](images/ETL6.png "Load data to Data Warehouse")
 3. **Data Warehouse Design**:
    - A star schema is created with fact and dimension tables.
    - Optimized for query performance and reporting.
