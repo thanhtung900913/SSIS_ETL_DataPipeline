@@ -45,6 +45,7 @@ This project demonstrates how to use SQL Server Integration Services (SSIS) to b
 3. **Data Warehouse Design**:
    - A star schema is created with fact and dimension tables.
    - Optimized for query performance and reporting.
+   ![ETL Process Diagram](images/ETL9.png "Data Warehouse Diagram")
 4. **Reporting**:
    - Use reporting tools to visualize:
      - Sales performance.
