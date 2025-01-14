@@ -13,6 +13,7 @@ This project demonstrates how to use SQL Server Integration Services (SSIS) to b
   - Business logic is implemented to structure the data for reporting purposes.
 - **Data Loading**:
   - Transformed data is loaded into a structured **Data Warehouse** designed for analytics and reporting.
+  ![ETL Process Diagram](images/ETL6.png "Load data to Data Warehouse")
 - **Reporting**:
   - Reports are built on the Data Warehouse using visualization tools to showcase actionable insights.
 
@@ -35,12 +36,16 @@ This project demonstrates how to use SQL Server Integration Services (SSIS) to b
 1. **Setup**:
    - Install SQL Server and restore the AdventureWorks 2022 sample database.
    - Configure SSIS for the project.
+      ![ETL Process Diagram](images/ETL1.png "Workflow overview")
 2. **ETL Process**:
-   - **Extract**: Data is extracted from source tables in AdventureWorks.
+   - **Extract**: Data is extracted from source tables in AdventureWorks. Using Slowly Change Dimension (SCD) or Lookup block to handle incremental loading.
+     ![ETL Process Diagram](images/ETL4.png "Extract data")
    - **Transform**: Apply transformations, such as:
      - Data type conversions.
      - Data cleansing.
      - Aggregations and calculations for reporting metrics.
+     ![ETL Process Diagram](images/ETL2.png "Transform data 1")
+     ![ETL Process Diagram](images/ETL3.png "Transform data 2")
    - **Load**: Load the transformed data into the Data Warehouse.
 3. **Data Warehouse Design**:
    - A star schema is created with fact and dimension tables.
